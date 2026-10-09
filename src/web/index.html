@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tabby – split the bill</title>
+<meta name="description" content="Split a restaurant bill item by item with friends – live, with payment QR codes.">
+<meta property="og:title" content="Tabby – split the bill">
+<meta property="og:description" content="Pick your name, tap what you had, pay with a QR code.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧾</text></svg>">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap" id="app"><p class="muted">…</p></div>
+
+<div class="bar" id="bar" hidden>
+  <div class="bar-in">
+    <div class="bar-info">
+      <small><b id="bar-name"></b> · <span id="bar-detail"></span></small>
+      <b id="bar-amount"></b>
+    </div>
+    <button class="btn primary" id="bar-pay" data-act="pay-me"></button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<dialog id="dlg-pay">
+  <h3 id="pay-title"></h3>
+  <div class="pay-amount" id="pay-amount"></div>
+  <p id="pay-sub"></p>
+  <div class="warn" id="pay-warn" hidden></div>
+  <div class="qr" id="pay-qr"></div>
+  <dl class="pay-info" id="pay-info">
+    <dt id="pay-acc-l"></dt><dd id="pay-acc"></dd>
+    <dt id="pay-amt-l"></dt><dd id="pay-amt"></dd>
+    <dt id="pay-msg-l"></dt><dd id="pay-msg"></dd>
+  </dl>
+  <div class="dlg-actions">
+    <button class="btn" data-act="close" id="pay-close"></button>
+    <button class="btn primary" data-act="share-invite" id="pay-share" hidden></button>
+  </div>
+</dialog>
+
+<dialog id="dlg-share">
+  <h3 id="share-title"></h3>
+  <p id="share-hint"></p>
+  <textarea id="share-text" readonly></textarea>
+  <div class="dlg-actions">
+    <a class="btn" id="share-wa" target="_blank" rel="noopener">WhatsApp</a>
+    <button class="btn" data-act="close" id="share-close"></button>
+    <button class="btn primary" data-act="copy-share" id="share-copy" autofocus></button>
+  </div>
+</dialog>
+
+<noscript><p class="wrap">This page needs JavaScript.</p></noscript>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

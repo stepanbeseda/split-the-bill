@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.netlify/
+.vercel/
+.data/
+src/generated/
+test-results/
+playwright-report/
+# Your real bills contain names and bank details – keep them out of the public repo.
+bills/*.json
+!bills/demo.json

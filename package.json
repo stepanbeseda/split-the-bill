@@ -1,0 +1,36 @@
+{
+  "name": "tabby",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Split a restaurant bill item by item with friends – live, with payment QR codes. Built to be operated by your coding agent.",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "dev": "tsx scripts/build.ts && tsx scripts/dev.ts",
+    "validate": "tsx scripts/validate.ts",
+    "iban": "tsx scripts/iban.ts",
+    "new-slug": "tsx scripts/new-slug.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.4",
+    "@upstash/redis": "^1.35.0",
+    "qrcode-generator": "^1.4.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.2",
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": { "node": ">=20" }
+}

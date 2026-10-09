@@ -1,0 +1,8 @@
+node_modules
+dist
+.netlify
+.data
+src/generated
+test-results
+playwright-report
+# bills/*.json are git-ignored but must be uploaded so the remote build can include them
