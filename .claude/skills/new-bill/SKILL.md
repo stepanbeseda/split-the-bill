@@ -1,6 +1,6 @@
 ---
 name: new-bill
-description: Turn a photo of a restaurant receipt into a live Tabby bill and deploy it. Use when the user shares a receipt or asks to split a bill, add a bill, fix a bill or redeploy Tabby.
+description: Turn a photo of a restaurant receipt into a live split-the-bill page and deploy it. Use when the user shares a receipt or asks to split a bill, add a bill, fix a bill or redeploy the app.
 ---
 
 # New bill from a receipt photo
@@ -79,7 +79,7 @@ npm run check          # typecheck + unit tests + build
 
 Deploy with whichever platform the project uses (see README → Deploy). First-time setup there is a one-off.
 
-- **Netlify:** `npx netlify deploy --prod`. If you are not logged in, run `npx netlify login --request "Deploy Tabby"`,
+- **Netlify:** `npx netlify deploy --prod`. If you are not logged in, run `npx netlify login --request "Deploy split-the-bill"`,
   give the user the URL, then `npx netlify login --check <ticket>`.
 - **Vercel:** `npx vercel --prod`. The project needs an Upstash Redis store connected (Vercel Marketplace).
 

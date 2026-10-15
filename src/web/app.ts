@@ -64,7 +64,7 @@ class BillApp {
     this.cb = compileBill(bill);
     this.t = translator(bill.locale);
     this.n = bill.people.length;
-    this.storeKey = `tabby:${slug}`;
+    this.storeKey = `split-the-bill:${slug}`;
     this.api = `/api/state?bill=${encodeURIComponent(slug)}`;
     const loc = bill.locale === 'cs' ? 'cs-CZ' : 'en-GB';
     this.money = new Intl.NumberFormat(loc, { style: 'currency', currency: bill.currency });
@@ -507,7 +507,7 @@ class BillApp {
 
   private async reset() {
     if (!confirm(this.t('resetConfirm'))) return;
-    const tokenKey = 'tabby:admin';
+    const tokenKey = 'split-the-bill:admin';
     let token = localStorage.getItem(tokenKey) ?? '';
     if (!token) token = prompt(this.t('adminPrompt')) ?? '';
     if (!token) return;

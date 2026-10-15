@@ -1,6 +1,6 @@
 # Agent guide
 
-Tabby is operated by a coding agent (Claude Code, Codex, …). The app never calls an AI model;
+split-the-bill is operated by a coding agent (Claude Code, Codex, …). The app never calls an AI model;
 **you** read receipt photos and turn them into validated JSON.
 
 ## Adding a bill from a receipt

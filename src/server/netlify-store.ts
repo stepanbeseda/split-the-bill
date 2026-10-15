@@ -3,7 +3,7 @@ import type { Cells } from '../core/types';
 import type { StateStore } from './store';
 
 /** Netlify Blobs with strong consistency; conditional writes use the blob ETag. */
-export function netlifyStore(name = 'tabby'): StateStore {
+export function netlifyStore(name = 'split-the-bill'): StateStore {
   const store = getStore({ name, consistency: 'strong' });
   return {
     async read(key) {

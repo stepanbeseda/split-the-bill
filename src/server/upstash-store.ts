@@ -13,7 +13,7 @@ return 1`;
  * Upstash Redis (the Vercel Marketplace Redis). Reads the env vars the Vercel integration sets:
  * `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN` or the legacy `KV_REST_API_URL`/`KV_REST_API_TOKEN`.
  */
-export function upstashStore(env: Record<string, string | undefined> = process.env, prefix = 'tabby:'): StateStore {
+export function upstashStore(env: Record<string, string | undefined> = process.env, prefix = 'split-the-bill:'): StateStore {
   const url = env.UPSTASH_REDIS_REST_URL ?? env.KV_REST_API_URL;
   const token = env.UPSTASH_REDIS_REST_TOKEN ?? env.KV_REST_API_TOKEN;
   if (!url || !token) throw new Error('Missing Upstash Redis credentials (UPSTASH_REDIS_REST_URL / UPSTASH_REDIS_REST_TOKEN).');

@@ -1,4 +1,4 @@
-# Tabby 🧾
+# split-the-bill 🧾
 
 **Split a restaurant bill item by item – live, with payment QR codes. Operated by your coding agent.**
 
@@ -45,7 +45,7 @@ receipt photo ──► coding agent ──► bills/<slug>.json ──► npm r
 ## Use it with your agent
 
 ```bash
-git clone https://github.com/stepanbeseda/tabby && cd tabby && npm install
+git clone https://github.com/stepanbeseda/split-the-bill && cd split-the-bill && npm install
 claude            # or: codex
 > Here is the receipt [photo]. There were six of us: Alex, Sam, Jordan, Robin, Kim and Max.
 > I paid €284.90 including tip. My IBAN is DE89 3704 0044 0532 0130 00.
@@ -88,9 +88,12 @@ npm run test:e2e   # Playwright: two browsers, live sync, QR code decoding
 
 ## How it started
 
-It began as a one-off page for a dinner in Amsterdam, built with Claude Code from a photo of the receipt and grown in
-the same conversation: live sync once people started double-claiming beers, CZK amounts and bank QR codes once everyone
-was home. This repository is the cleaned-up, reusable version.
+I built the first version in about 20 minutes during a flight. We had just been out for dinner, I had paid for the whole
+table, and I didn't want to work out by hand who owed what. So I gave a photo of the receipt to Claude Code and asked for
+a page where everyone could tap what they'd had.
+
+It turned out to be handy enough that I cleaned it up into something reusable. If you're usually the one who pays and
+then has to chase everyone for money, I hope it saves you the hassle too.
 
 ## License
 

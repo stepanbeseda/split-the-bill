@@ -31,4 +31,4 @@ createServer(async (req, res) => {
   }
   res.writeHead(200, { 'content-type': types[extname(file)] ?? 'application/octet-stream' });
   res.end(readFileSync(file));
-}).listen(port, () => console.log(`Tabby dev server: http://localhost:${port}/b/demo  (admin token: ${process.env.ADMIN_TOKEN ?? 'dev'})`));
+}).listen(port, () => console.log(`split-the-bill dev server: http://localhost:${port}/b/demo  (admin token: ${process.env.ADMIN_TOKEN ?? 'dev'})`));
