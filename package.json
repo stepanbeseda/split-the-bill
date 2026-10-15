@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "check": "npm run typecheck && npm test && npm run build"
+    "check": "npm run build && npm run typecheck && npm test"
   },
   "dependencies": {
     "@netlify/blobs": "^11.1.4",

@@ -2,6 +2,8 @@
 
 **Split a restaurant bill item by item – live, with payment QR codes. Operated by your coding agent.**
 
+**[Try the live demo →](https://split-the-bill-demo.netlify.app/b/demo)** (pick a name on two phones and watch items disappear; it resets every hour)
+
 One person pays, takes a photo of the receipt and hands it to Claude Code or Codex. A minute later the whole table gets
 a link: everyone taps what they had, items disappear as they are taken, and each person gets the exact amount –
 tip included – plus a QR code for their banking app.
@@ -68,6 +70,7 @@ interface (`read` + compare-and-set `write`).
 | Function | [`netlify/functions/state.mts`](netlify/functions/state.mts) | [`api/state.ts`](api/state.ts) |
 
 Optional environment variable: `ADMIN_TOKEN` – enables the *Reset all* button for whoever knows the token.
+For a public demo on Netlify, `RESET_LISTED_BILLS=true` clears bills marked `"listed": true` every hour.
 Preview deployments use separate data, so testing never touches a live bill.
 
 ## Develop
